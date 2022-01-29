@@ -20,4 +20,9 @@ public class EnemyBasicMovement : MonoBehaviour
 
         rb.velocity = new Vector3 (enemySpeed * Mathf.Sin(time), rb.velocity.y, 0.0f); 
     }
+void OnCollisionEnter2D(Collision2D collision)
+{
+    AkSoundEngine.PostEvent("Play_Enemy_Land", gameObject);
+
+}
 }
