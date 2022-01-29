@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
-  
- public class CameraFollow : MonoBehaviour
+
+public class CameraFollow : MonoBehaviour
 {
     public float interpVelocity;
     public float minDistance;
@@ -22,13 +22,12 @@ using System.Collections;
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.x > 340.8f)
+        if (gameObject.transform.position.x > 340.6f)
         {
-            gameObject.GetComponent<CameraFollow>().enabled = false;
             cameraSwitch = true;
         }
-            //If using original camera
-            if (!cameraSwitch)
+        //If using original camera
+        if (!cameraSwitch)
         {
             if (target)
             {
@@ -49,17 +48,7 @@ using System.Collections;
         {
             if (target)
             {
-                Vector3 posNoZ = transform.position;
-                posNoZ.z = target.transform.position.z;
-
-                Vector3 targetDirection = (target.transform.position - posNoZ);
-
-                interpVelocity = targetDirection.magnitude * 5f;
-
-                targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
-
-                transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
-                //transform.position = new Vector3(340.8f, transform.position.y, transform.position.z);
+                gameObject.transform.position = new Vector3(340.6f, target.transform.position.y, -10);
             }
         }
     }
