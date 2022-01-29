@@ -5,35 +5,62 @@ using System.Collections;
   
  public class CameraFollow : MonoBehaviour
 {
-
     public float interpVelocity;
     public float minDistance;
     public float followDistance;
     public GameObject target;
     public Vector3 offset;
     Vector3 targetPos;
+    private bool cameraSwitch = false;
     // Use this for initialization
     void Start()
     {
+
         targetPos = transform.position;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (target)
+        if (gameObject.transform.position.x > 340.8f)
         {
-            Vector3 posNoZ = transform.position;
-            posNoZ.z = target.transform.position.z;
+            gameObject.GetComponent<CameraFollow>().enabled = false;
+            cameraSwitch = true;
+        }
+            //If using original camera
+            if (!cameraSwitch)
+        {
+            if (target)
+            {
+                Vector3 posNoZ = transform.position;
+                posNoZ.z = target.transform.position.z;
 
-            Vector3 targetDirection = (target.transform.position - posNoZ);
+                Vector3 targetDirection = (target.transform.position - posNoZ);
 
-            interpVelocity = targetDirection.magnitude * 5f;
+                interpVelocity = targetDirection.magnitude * 5f;
 
-            targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
+                targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
 
-            transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
-            transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
+                transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+            }
+        }
+        else
+        {
+            if (target)
+            {
+                Vector3 posNoZ = transform.position;
+                posNoZ.z = target.transform.position.z;
+
+                Vector3 targetDirection = (target.transform.position - posNoZ);
+
+                interpVelocity = targetDirection.magnitude * 5f;
+
+                targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
+
+                transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
+                //transform.position = new Vector3(340.8f, transform.position.y, transform.position.z);
+            }
         }
     }
 }
