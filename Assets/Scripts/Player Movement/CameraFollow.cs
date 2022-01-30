@@ -12,19 +12,28 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     Vector3 targetPos;
     private bool cameraSwitch = false;
+    private bool cameraSwitch2 = false;
+    GameObject player;
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.Find("Player");
         targetPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.x > 340.6f)
+        if (gameObject.transform.position.x > 340.5f)
         {
             cameraSwitch = true;
+            if (gameObject.transform.position.y > 625.0f)
+            {
+                cameraSwitch = false;
+                cameraSwitch2 = true;
+
+            }
+
         }
         //If using original camera
         if (!cameraSwitch)
@@ -41,7 +50,15 @@ public class CameraFollow : MonoBehaviour
                 targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
 
                 transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
-                transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+                if (!cameraSwitch2)
+                {
+                    transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x, 629.61f, transform.position.z);
+
+                }
             }
         }
         else

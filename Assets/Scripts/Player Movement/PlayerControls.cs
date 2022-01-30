@@ -104,7 +104,7 @@ public class PlayerControls : MonoBehaviour
         timer -= Time.deltaTime;
         if (rb.velocity.y > 20.0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 10.0f);
+            rb.velocity = new Vector2(rb.velocity.x, 20.0f);
         }
         if (rb.velocity.x < 0.1f && rb.velocity.x > -0.1f)
         {

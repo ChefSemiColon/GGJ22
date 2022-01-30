@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-public class TryAgainButton : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class RestartButton : MonoBehaviour
 {
     public Button restartButton;
     private float timer = 0.5f;
@@ -16,13 +15,13 @@ public class TryAgainButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        //Load the main scene
-        AkSoundEngine.PostEvent("Play_UI_Start", gameObject);
+
+
+
         while (timer > 0)
         {
             timer -= Time.deltaTime;
         }
-        AkSoundEngine.PostEvent("Play_In_Game", gameObject);
         SceneManager.LoadScene(1);
     }
 }

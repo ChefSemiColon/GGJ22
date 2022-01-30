@@ -15,15 +15,20 @@ namespace AK
     {
         static const AkUniqueID PLAY_AMB_BLEND = 2001508374U;
         static const AkUniqueID PLAY_ENEMY_LAND = 4163225046U;
+        static const AkUniqueID PLAY_ENEMY_VOCALS = 2855648523U;
         static const AkUniqueID PLAY_GRAVITY_SWITCH = 3240456823U;
         static const AkUniqueID PLAY_IN_GAME = 3671131488U;
         static const AkUniqueID PLAY_MAIN_MENU = 3306210749U;
         static const AkUniqueID PLAY_OBJECT_LAND = 3883907685U;
+        static const AkUniqueID PLAY_PC_DEATH = 228649394U;
         static const AkUniqueID PLAY_PC_FOOTSTEPS = 485331593U;
         static const AkUniqueID PLAY_PC_LAND = 4210120443U;
         static const AkUniqueID PLAY_UI_RETRY = 1133542507U;
         static const AkUniqueID PLAY_UI_START = 643450781U;
         static const AkUniqueID PLAY_UI_STOP = 1019176095U;
+        static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID STOP_IN_GAME = 228472158U;
+        static const AkUniqueID STOP_MAIN_MENU = 774860123U;
         static const AkUniqueID TRIGGER_CHORUS_1 = 207260448U;
         static const AkUniqueID TRIGGER_CHORUS_2 = 207260451U;
         static const AkUniqueID TRIGGER_MAIN_MENU = 2876245593U;
@@ -81,7 +86,12 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID ENEMY_CHARACTER = 4022354699U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID PLAYER_CHARACTER = 3570892038U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

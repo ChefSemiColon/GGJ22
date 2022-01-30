@@ -11,6 +11,7 @@ public class KillPlayer : MonoBehaviour
         //Collision Dection with floor
         if (collision.gameObject.tag == "Player")
         {
+            //AkSoundEngine.PostEvent("Stop_All", gameObject);
             SceneManager.LoadScene(2);
         }
 

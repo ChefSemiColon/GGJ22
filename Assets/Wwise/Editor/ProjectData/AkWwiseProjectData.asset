@@ -303,8 +303,42 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 3971146b63f6a4439d35f39bc496d0b3
     GuidInternal: 
-    m_lastTime: -8585581201346254728
+    m_lastTime: -8585580592980107321
     List:
+    - name: Ambience
+      guid: 1c9cf99919f57c458e48d82258b2898a
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3971146b63f6a4439d35f39bc496d0b3
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 1c9cf99919f57c458e48d82258b2898a
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambience
+    - name: Enemy_Character
+      guid: 399d89b652503a428fcb07545fe87118
+      id: 4022354699
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3971146b63f6a4439d35f39bc496d0b3
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Enemy_Character
+        ObjectType: 2
+        guid: 399d89b652503a428fcb07545fe87118
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Enemy_Character
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -319,6 +353,57 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Music
+      guid: 06286fac7aa5f14d867c5944273ee7b0
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3971146b63f6a4439d35f39bc496d0b3
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Music
+        ObjectType: 2
+        guid: 06286fac7aa5f14d867c5944273ee7b0
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: Player_Character
+      guid: b84c3f3a706ae247a0e3c6b1c1c63891
+      id: 3570892038
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3971146b63f6a4439d35f39bc496d0b3
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Player_Character
+        ObjectType: 2
+        guid: b84c3f3a706ae247a0e3c6b1c1c63891
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player_Character
+    - name: SFX
+      guid: ce99ceacfabcea42a8e8bf0c5f1b2cbb
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 3971146b63f6a4439d35f39bc496d0b3
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: ce99ceacfabcea42a8e8bf0c5f1b2cbb
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -331,7 +416,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: ab83b99892e68441ac4cac1bdfb97a09
     GuidInternal: 
-    m_lastTime: -8585581132050199648
+    m_lastTime: -8585580592980609811
     List:
     - name: Ambience
       guid: c7bb9f652a67484db9c7407eb9093e76
@@ -415,7 +500,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b8bcd1f13de5024a83542f932fadc4da
     GuidInternal: 
-    m_lastTime: -8585581092913522606
+    m_lastTime: -8585580592979638582
     List:
     - name: Play_Amb_Blend
       guid: 9789640b5faac64fa83558444c46c4cb
@@ -448,9 +533,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 78a580fdd187cf4f82192ca3a8aff3b2
       Path: Events\Default Work Unit\Play_Enemy_Land
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: 0.516322
       minDuration: 0.357333
+    - name: Play_Enemy_Vocals
+      guid: 9404528b624d2945886c0a54385f47f2
+      id: 2855648523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8bcd1f13de5024a83542f932fadc4da
+      - ElementName: Play_Enemy_Vocals
+        ObjectType: 3
+        guid: 9404528b624d2945886c0a54385f47f2
+      Path: Events\Default Work Unit\Play_Enemy_Vocals
+      maxAttenuation: 20
+      maxDuration: 2.175142
+      minDuration: 1.330877
     - name: Play_Gravity_Switch
       guid: 893f0e9e8d53244cacbc175d64714cc5
       id: 3240456823
@@ -516,9 +618,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: efd32de49aa2ac44b55ec8eb50b7696c
       Path: Events\Default Work Unit\Play_Object_Land
-      maxAttenuation: 0
+      maxAttenuation: 20
       maxDuration: 0.222458
       minDuration: 0.182543
+    - name: Play_PC_Death
+      guid: 0bcd905245007a4db018dd2bca003749
+      id: 228649394
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8bcd1f13de5024a83542f932fadc4da
+      - ElementName: Play_PC_Death
+        ObjectType: 3
+        guid: 0bcd905245007a4db018dd2bca003749
+      Path: Events\Default Work Unit\Play_PC_Death
+      maxAttenuation: 0
+      maxDuration: 1.799341
+      minDuration: 1.799341
     - name: Play_PC_Footsteps
       guid: c00a1da53130544bac3621d2eef709b1
       id: 485331593
@@ -604,6 +723,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.365333
       minDuration: 1.365333
+    - name: Stop_All
+      guid: c5c0a6d2f9a441428a8be909f0d4972b
+      id: 452547817
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8bcd1f13de5024a83542f932fadc4da
+      - ElementName: Stop_All
+        ObjectType: 3
+        guid: c5c0a6d2f9a441428a8be909f0d4972b
+      Path: Events\Default Work Unit\Stop_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_In_Game
+      guid: 166614bb4a436a49b9f5f80d6af48043
+      id: 228472158
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8bcd1f13de5024a83542f932fadc4da
+      - ElementName: Stop_In_Game
+        ObjectType: 3
+        guid: 166614bb4a436a49b9f5f80d6af48043
+      Path: Events\Default Work Unit\Stop_In_Game
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Main_Menu
+      guid: 19ea3848ab5eae468826d913586ed299
+      id: 774860123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b8bcd1f13de5024a83542f932fadc4da
+      - ElementName: Stop_Main_Menu
+        ObjectType: 3
+        guid: 19ea3848ab5eae468826d913586ed299
+      Path: Events\Default Work Unit\Stop_Main_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Trigger_Chorus_1
       guid: 43a67219ce95524f8d0540c6026f3dff
       id: 207260448
@@ -963,7 +1133,7 @@ MonoBehaviour:
         guid: 9ad1514026e86944a55d60692441e577
       Path: Triggers\Default Work Unit\Verse_3
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000018000000190000001a0000001b000000210000002200000023000000
+  ExpandedWaapiItemIds: 01000000050000000600000018000000190000001a0000001b0000001c0000001e0000001f000000210000002200000023000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
